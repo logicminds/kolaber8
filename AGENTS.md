@@ -1,6 +1,6 @@
 # Agent Instructions
 
-All agents operating in this repository MUST load the kolaber8 skill from `.agents/skills/kolaber8/SKILL.md`.
+All agents operating in this repository MUST load the kolaber8 skill from `skills/kolaber8/SKILL.md`.
 
 kolaber8 governs the boundary between two people's AI systems. It provides two operations:
 - **PUSH**: package current thinking, append it to `exchange/ledger.md`, rebase on the remote tip, commit, and push to the user's repository when the human is ready to share.
