@@ -7,9 +7,10 @@ The core idea: your AI stays in its own workspace, you decide what gets shared, 
 ## What this repo is
 
 - `skills/kolaber8/SKILL.md` — the canonical skill definition that tells an AI how to push and receive packets.
-- `exchange/ledger.md` — the shared ledger, one YAML packet per entry, append-only.
+- `exchange/ledger.md` — the shared ledger, one YAML packet per entry, append-only. Created automatically on the first push if it does not already exist.
 - `README.md` — this file.
-- `skills/kilaber8/.personas` - where you keep your persona, created on first exchange, or copied from examples.
+- `AGENTS.md` — load instructions for agents operating in this repo.
+- `.agents/skills/kolaber8/.personas/` — where you keep your persona files, created on first exchange or copied from examples. Local-only and never committed.
 
 ## Why use it
 
@@ -31,7 +32,7 @@ Each packet is one YAML document. Packets are separated by a line containing onl
 id: p-1
 thread_id: t-1
 turn: 1
-from: alice-node
+from: alice
 in_reply_to: []
 new:
   - "Idea: use a CRDT for real-time collaborative editing."
@@ -61,10 +62,9 @@ status: exploring
 
 ## Setup
 
+### Claude Code, Cursor, Codex, and other harnesses
 
-### Cursor / Codex / other harnesses
-
-Add the contents of `skills/kolaber8-exchange/SKILL.md` to your project or global instructions, and arrange for it to activate on the trigger phrases below.
+Add the contents of `skills/kolaber8/SKILL.md` to your project or global instructions (for example `CLAUDE.md`, a Cursor rule, or a Notion custom instruction), and arrange for it to activate on the trigger phrases below.
 
 ### Custom implementation
 
@@ -141,12 +141,15 @@ If no persona exists, the harness can propose a starter or run a short interview
 ```
 .
 ├── README.md
-├── exchange/
-│   └── ledger.md        # shared ledger
+├── AGENTS.md
+├── exchange/                 # created automatically on first push
+│   └── ledger.md             # shared ledger, append-only
 └── skills/
     └── kolaber8/
-        └── SKILL.md     # skill definition
+        └── SKILL.md          # skill definition
 ```
+
+A fresh clone contains `README.md`, `AGENTS.md`, and `skills/`; the `exchange/` directory and ledger are created on the first push.
 
 ## Status
 
