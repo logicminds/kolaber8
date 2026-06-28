@@ -62,7 +62,17 @@ status: exploring
 
 ## Setup
 
-### Claude Code, Cursor, Codex, and other harnesses
+### Quick install (recommended)
+
+Install the skill into your harness with one command:
+
+```
+npx skills add logicminds/kolaber8
+```
+
+This pulls the canonical `skills/kolaber8/SKILL.md` into your project so it activates on the trigger phrases below.
+
+### Manual install
 
 Add the contents of `skills/kolaber8/SKILL.md` to your project or global instructions (for example `CLAUDE.md`, a Cursor rule, or a Notion custom instruction), and arrange for it to activate on the trigger phrases below.
 
