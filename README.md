@@ -62,9 +62,30 @@ status: exploring
 
 ## Setup
 
-### Claude Code, Cursor, Codex, and other harnesses
+The portable unit is a tagged `skills/kolaber8/SKILL.md`, copied into each harness so it activates on the trigger phrases below. The install steps differ per harness.
 
-Add the contents of `skills/kolaber8/SKILL.md` to your project or global instructions (for example `CLAUDE.md`, a Cursor rule, or a Notion custom instruction), and arrange for it to activate on the trigger phrases below.
+### Claude Code and other skills.sh harnesses
+
+Install with the skills CLI:
+
+```
+npx skills add logicminds/kolaber8
+```
+
+Path caveat: the skills.sh CLI installs to `~/.agents/skills/` while Claude Code reads from `~/.claude/skills/`, so a freshly installed skill can be invisible until you symlink it (or point the CLI at the claude-code target). Verify the skill actually loads in a fresh session before relying on it; see the current skills.sh docs for the exact flow.
+
+### Notion
+
+Notion installs a skill as a workspace page, not via the CLI:
+
+1. Copy the contents of `skills/kolaber8/SKILL.md` into a new Notion page.
+2. Register it via Settings > Notion AI > Skills > Add a Skill (or from the page menu: Use with AI > Use as AI Skill).
+
+Updates are manual: re-paste on each new tag. Put the tag in the page title (for example `Kolaber8 Exchange Protocol - v0.2`) so the installed version stays auditable.
+
+### Manual / other harnesses
+
+For any harness without a CLI path, add the contents of `skills/kolaber8/SKILL.md` to your project or global instructions (for example `CLAUDE.md` or a Cursor rule) and arrange for it to activate on the trigger phrases below.
 
 ### Custom implementation
 
