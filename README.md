@@ -81,7 +81,7 @@ Notion installs a skill as a workspace page, not via the CLI:
 1. Copy the contents of `skills/kolaber8/SKILL.md` into a new Notion page.
 2. Register it via Settings > Notion AI > Skills > Add a Skill (or from the page menu: Use with AI > Use as AI Skill).
 
-Updates are manual: re-paste on each new tag. Put the tag in the page title (for example `Kolaber8 Exchange Protocol - v0.2`) so the installed version stays auditable.
+Updates are manual: re-paste on each new tag. Put the tag in the page title (for example `Kolaber8 Exchange Protocol - v0.2.0`) so the installed version stays auditable.
 
 ### Manual / other harnesses
 
@@ -174,7 +174,7 @@ A fresh clone contains `README.md`, `AGENTS.md`, and `skills/`; the `exchange/` 
 
 ## Status
 
-Reference implementation of the kolaber8 protocol. Skill version `v0.1`.
+Reference implementation of the kolaber8 protocol. Skill version `v0.2.0`.
 
 ## License
 
